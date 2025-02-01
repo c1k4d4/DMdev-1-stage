@@ -6,16 +6,16 @@
 
 public class CalculatorDemo {
 
-    private static double operand1 = 5;
-    private static double operand2 = 0;
+    private static double operand1 = 10;
+    private static double operand2 = 5;
     private static char operation = '/';
 
     public static void main(String[] args) {
-        double result = calculator(operand1, operand2, operation);
+        double result = calculate(operand1, operand2, operation);
         System.out.printf("%f %c %f = %f", operand1, operation, operand2, result);
     }
 
-    private static double calculator(double operand1, double operand2, char operation)
+    private static double calculate(double operand1, double operand2, char operation)
             throws IllegalArgumentException, ArithmeticException {
 
         return switch (operation) {
@@ -23,7 +23,7 @@ public class CalculatorDemo {
             case '-' -> operand1 - operand2;
             case '*' -> operand1 * operand2;
             case '/' -> {
-                if (operand2 == 0) throw new ArithmeticException("/ by zero");
+                if (operand2 == 0) throw new ArithmeticException("div by zero");
                 yield operand1 / operand2;
             }
             default -> throw new IllegalArgumentException("no such operation");

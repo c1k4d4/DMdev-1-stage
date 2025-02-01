@@ -25,9 +25,7 @@ public class Triangle {
     public static void compare(Triangle tr1, Triangle tr2) {
         if (tr1.getVolume() == tr2.getVolume())
             System.out.println("Triangles are equal");
-        else if (tr1.getVolume() < tr2.getVolume())
-            System.out.println("First triangle is smaller");
         else
-            System.out.println("First triangle is bigger");
+            System.out.println("First triangle is " + (tr1.getVolume() < tr2.getVolume() ? "smaller" : "bigger"));
     }
 }

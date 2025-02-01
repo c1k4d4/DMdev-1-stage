@@ -7,7 +7,7 @@
 
 public class QuarterDemo {
 
-    private static int minutes = 60;
+    private static int minutes = 50;
 
     public static void main(String[] args) {
         printQuarter(minutes);
@@ -16,13 +16,13 @@ public class QuarterDemo {
     private static void printQuarter(int minutes) {
         String quarter;
         if (minutes == 0)
-            quarter = "first";
+            quarter = "1st";
         else {
             quarter = switch (minutes / 15) {
-                case 0 -> "first";
-                case 1 -> "second";
-                case 2 -> "third";
-                case 3 -> "fourth";
+                case 0 -> "1st";
+                case 1 -> "2nd";
+                case 2 -> "3rd";
+                case 3 -> "4th";
                 default -> "no such";
             };
         }
