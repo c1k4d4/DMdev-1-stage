@@ -1,4 +1,4 @@
-package functions;
+package com.c1k4d4.tasks.week1.functions;
 
 /*
  * Неделя 1 (Computer Science, функции)
@@ -8,8 +8,8 @@ package functions;
 
 public class TriangleDemo {
     public static void main(String[] args) {
-        Triangle tr1 = new Triangle(5, 10);
-        Triangle tr2 = new Triangle(10, 20);
+        functions.Triangle tr1 = new functions.Triangle(5, 10);
+        functions.Triangle tr2 = new functions.Triangle(10, 20);
 
         //setVolume() выполняется в конструкторе класса functions.Triangle
         tr1.printCompareVolume(tr2);
