@@ -1,4 +1,4 @@
-package arrays;
+package com.c1k4d4.tasks.week2.arrays;
 
 /*
  * Неделя 2 (Массивы)

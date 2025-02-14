@@ -1,4 +1,4 @@
-package cycles;
+package com.c1k4d4.tasks.week2.cycles;
 
 /*
  * Неделя 2 (Циклы)
@@ -10,8 +10,8 @@ package cycles;
  */
 
 import java.util.Scanner;
-import static cycles.utils.Digits.countOfEvenDigits;
-import static cycles.utils.Digits.countOfOddDigits;
+import static com.c1k4d4.tasks.week2.cycles.utils.Digits.countOfEvenDigits;
+import static com.c1k4d4.tasks.week2.cycles.utils.Digits.countOfOddDigits;
 
 public class Task1_OddAndEvenStarter {
 

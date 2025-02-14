@@ -1,4 +1,4 @@
-package cycles;
+package com.c1k4d4.tasks.week2.cycles;
 
 /*
  * Неделя 2 (Циклы)
@@ -9,7 +9,7 @@ package cycles;
  */
 
 import java.util.Scanner;
-import static cycles.utils.Digits.reverse;
+import static com.c1k4d4.tasks.week2.cycles.utils.Digits.reverse;
 
 public class Task2_ReverseIntStarter {
 

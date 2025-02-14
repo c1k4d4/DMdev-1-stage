@@ -1,4 +1,4 @@
-package cycles.utils;
+package com.c1k4d4.tasks.week2.cycles.utils;
 
 /*
  * Служебный класс для работы с десятичными разрядами.
