@@ -19,23 +19,26 @@ public class Task3_IvanAccountStarter {
     private static double bankBalance = 0.0;
     private static double brokerBalance = 0.0;
     private static double currentSalary = 600.0;
-    private static double expenses = 300.0;
-    private static double salaryIncrease = 400.0;
-    private static int increaseSalaryPeriod = 6;
-    private static int investmentPeriod = 38;
-    private static double savingPercentage = 0.1;
-    private static double incomePercentage = 1.02;
+
+    private static final double EXPENSES = 300.0;
+    private static final double SALARY_INCREASE = 400.0;
+    private static final int INC_SALARY_PERIOD = 6;
+    private static final int INVEST_PERIOD = 38;
+    private static final double SAVING_PERCENTAGE = 0.1;
+    private static final double INCOME_PERCENTAGE = 1.02;
 
     public static void main(String[] args) {
-        System.out.print("Заработано за " + investmentPeriod + " месяцев: " + calculate());
+        System.out.print("Заработано за " + INVEST_PERIOD + " месяцев: " + calculate());
     }
 
     private static double calculate() {
-        for (int i = 1; i <= investmentPeriod; i++) {
-            if (i % increaseSalaryPeriod == 0) raiseSalary();
+        for (int i = 1; i <= INVEST_PERIOD; i++) {
+            if (i % INC_SALARY_PERIOD == 0) {
+                raiseSalary();
+            }
             getIncomeFromInvestments();
-            putInBank(currentSalary - expenses);
-            invest(currentSalary * savingPercentage);
+            putInBank(currentSalary - EXPENSES);
+            invest(currentSalary * SAVING_PERCENTAGE);
 //            System.out.println(i + ". Баланс в банке: " + bankBalance);
 //            System.out.println(i + ". Баланс на брокерск. счете: " + brokerBalance);
         }
@@ -43,7 +46,7 @@ public class Task3_IvanAccountStarter {
     }
 
     private static void raiseSalary() {
-        currentSalary += salaryIncrease;
+        currentSalary += SALARY_INCREASE;
     }
 
     private static void putInBank(double sum) {
@@ -56,7 +59,7 @@ public class Task3_IvanAccountStarter {
     }
 
     private static void getIncomeFromInvestments() {
-        brokerBalance *= incomePercentage;
+        brokerBalance *= INCOME_PERCENTAGE;
     }
 
 }

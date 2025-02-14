@@ -1,20 +1,24 @@
-package cycles;
+package cycles.utils;
 
 /*
  * Служебный класс для работы с десятичными разрядами.
- * Подумал, будет логично вынести их в отдельный класс.
  */
 
-public class Digits {
+public final class Digits {
 
     private static final int DIGIT = 10;
+
+    private Digits() {
+    }
 
     //Задача 1: OddAndEvenStarter
     public static int countOfEvenDigits(int value) {
         int count = 0;
         value = Math.abs(value);
         while (value > 0) {
-            if (isEven(getLastDigit(value))) count++;
+            if (isEven(getLastDigit(value))) {
+                count++;
+            }
             value = dropLastDigit(value);
         }
         return count;
@@ -25,7 +29,9 @@ public class Digits {
         int count = 0;
         value = Math.abs(value);
         while (value > 0) {
-            if ( ! isEven(getLastDigit(value)) ) count++;
+            if ( ! isEven(getLastDigit(value)) ) {
+                count++;
+            }
             value = dropLastDigit(value);
         }
         return count;

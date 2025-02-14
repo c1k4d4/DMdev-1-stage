@@ -10,8 +10,8 @@ package cycles;
  */
 
 import java.util.Scanner;
-import static cycles.Digits.countOfEvenDigits;
-import static cycles.Digits.countOfOddDigits;
+import static cycles.utils.Digits.countOfEvenDigits;
+import static cycles.utils.Digits.countOfOddDigits;
 
 public class Task1_OddAndEvenStarter {
 

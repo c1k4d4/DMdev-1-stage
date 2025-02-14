@@ -9,8 +9,7 @@ package cycles;
  */
 
 import java.util.Scanner;
-
-import static cycles.Digits.reverse;
+import static cycles.utils.Digits.reverse;
 
 public class Task2_ReverseIntStarter {
 

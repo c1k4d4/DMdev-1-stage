@@ -14,9 +14,8 @@ import java.util.Arrays;
 
 public class Task1_RemoveNegativeStarter {
 
-    private static final int[] TEST_ARRAY = { -12, 0, 14, 541, -684, -3, 51, 20, 85, -29 };
-
     public static void main(String[] args) {
+        int[] TEST_ARRAY = { -12, 0, 14, 541, -684, -3, 51, 20, 85, -29 };
         System.out.println("Первоначальный массив: " + Arrays.toString(TEST_ARRAY));
         int[] array = removeNegativeElements(TEST_ARRAY);
         System.out.println("После удаления отриц. эл-ов: " + Arrays.toString(array));
@@ -25,13 +24,21 @@ public class Task1_RemoveNegativeStarter {
     }
 
     private static int[] removeNegativeElements(int[] array) {
-        int[] result = new int[array.length];
-        int index = 0;
+        int positiveCount = 0;
         for (int value : array) {
-            if (value >= 0)
-                result[index++] = value;
+            if (value >= 0) {
+                positiveCount++;
+            }
         }
-        return Arrays.copyOf(result, index);
+
+        int index = 0;
+        int[] result = new int[positiveCount];
+        for (int value : array) {
+            if (value >= 0) {
+                result[index++] = value;
+            }
+        }
+        return result;
     }
 
     private static int[] multiplyByLength(int[] array) {

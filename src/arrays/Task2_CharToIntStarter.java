@@ -17,9 +17,8 @@ import java.util.Arrays;
 
 public class Task2_CharToIntStarter {
 
-    private static final char[] TEST_ARRAY = { 'A', 'B', 'C', 'D', '!', '7', '@', '9', '0', ']' };
-
     public static void main(String[] args) {
+        char[] TEST_ARRAY = { 'A', 'B', 'C', 'D', '!', '7', '@', '9', '0', ']' };
         //тестирование методов
         System.out.println("Первоначальный массив: " + Arrays.toString(TEST_ARRAY));
         System.out.println("Массив кодов символов: " + Arrays.toString(charToInt(TEST_ARRAY)));
@@ -42,19 +41,28 @@ public class Task2_CharToIntStarter {
 
     private static double getArithmeticalMean(int[] array) {
         long sum = 0L;
-        for (int value : array)
+        for (int value : array) {
             sum += value;
+        }
         return (double) sum / array.length;
     }
 
     private static int[] getGreaterElements(int[] array, int median) {
-        int[] result = new int[array.length];
-        int index = 0;
+        int greaterCount = 0;
         for (int value : array) {
-            if (value > median)
-                result[index++] = value;
+            if (value > median) {
+                greaterCount++;
+            }
         }
-        return Arrays.copyOf(result, index);
+
+        int index = 0;
+        int[] result = new int[greaterCount];
+        for (int value : array) {
+            if (value > median) {
+                result[index++] = value;
+            }
+        }
+        return result;
     }
 
     private static void printElements(int[] array) {
