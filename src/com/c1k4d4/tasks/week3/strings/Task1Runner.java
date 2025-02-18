@@ -9,7 +9,7 @@ package com.c1k4d4.tasks.week3.strings;
  * "abc Cpddd Dio OsfWw" -> "ABCPDIOSFW"
  */
 
-import static com.c1k4d4.tasks.week3.strings.util.Task1Utils.*;
+import static com.c1k4d4.tasks.week3.strings.utils.Task1Util.*;
 
 public class Task1Runner {
 

@@ -1,6 +1,6 @@
-package com.c1k4d4.tasks.week3.strings.util;
+package com.c1k4d4.tasks.week3.strings.utils;
 
-public final class Task1Utils {
+public final class Task1Util {
 
     public static String removeDuplicates(String original) {
         if (isNullOrEmpty(original)) {
@@ -44,6 +44,6 @@ public final class Task1Utils {
         return (str == null || str.isEmpty());
     }
 
-    private Task1Utils() {
+    private Task1Util() {
     }
 }

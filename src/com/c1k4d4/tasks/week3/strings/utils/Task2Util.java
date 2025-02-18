@@ -1,6 +1,6 @@
-package com.c1k4d4.tasks.week3.strings.util;
+package com.c1k4d4.tasks.week3.strings.utils;
 
-public final class Task2Utils {
+public final class Task2Util {
 
     private static final int CODE_POINT_OF_ZERO = 48;
     public static final int CODE_POINT_OF_NINE = 57;
@@ -41,7 +41,7 @@ public final class Task2Utils {
         return (int) ch - CODE_POINT_OF_ZERO;
     }
 
-    private Task2Utils() {
+    private Task2Util() {
     }
 
 }

@@ -12,7 +12,7 @@ package com.c1k4d4.tasks.week3.strings;
  */
 
 import java.util.Arrays;
-import static com.c1k4d4.tasks.week3.strings.util.Task2Utils.*;
+import static com.c1k4d4.tasks.week3.strings.utils.Task2Util.*;
 
 public class Task2Runner {
 
