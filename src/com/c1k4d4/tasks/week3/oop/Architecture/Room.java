@@ -1,4 +1,4 @@
-package com.c1k4d4.tasks.week3.oop;
+package com.c1k4d4.tasks.week3.oop.Architecture;
 
 public class Room {
     boolean isWalkTrough;

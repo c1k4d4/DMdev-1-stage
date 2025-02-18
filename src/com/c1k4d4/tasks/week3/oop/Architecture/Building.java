@@ -1,15 +1,16 @@
-package com.c1k4d4.tasks.week3.oop;
+package com.c1k4d4.tasks.week3.oop.Architecture;
 
-public class Building extends LivingModule {
+public class Building {
+    private int number;
     private Storey[] storeys;
 
     public Building(int number, Storey[] storeys) {
-        super(number);
+        setNumber(number);
         setStoreys(storeys);
     }
 
-    private void setStoreys(Storey[] storeys) {
-        this.storeys = storeys;
+    public int getNumber() {
+        return number;
     }
 
     public Storey[] getStoreys() {
@@ -19,6 +20,10 @@ public class Building extends LivingModule {
     @Override
     public String toString() {
         return String.format("Дом %d, кол-во этажей %d", getNumber(), getStoreys().length);
+    }
+
+    public void print() {
+        System.out.println(this);
     }
 
     public static void printAllInformation(Building building) {
@@ -34,4 +39,11 @@ public class Building extends LivingModule {
         }
     }
 
+    private void setNumber(int number) {
+        this.number = number;
+    }
+
+    private void setStoreys(Storey[] storeys) {
+        this.storeys = storeys;
+    }
 }
