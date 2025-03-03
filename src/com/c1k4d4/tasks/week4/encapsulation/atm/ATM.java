@@ -25,13 +25,11 @@ public class ATM {
     private int banknoteStock10;
     private int banknoteStock20;
     private int banknoteStock50;
-    private int cashStock;
 
     public ATM(int banknoteStock10, int banknoteStock20, int banknoteStock50) {
         this.banknoteStock10 = validateAmount(banknoteStock10);
         this.banknoteStock20 = validateAmount(banknoteStock20);
         this.banknoteStock50 = validateAmount(banknoteStock50);
-        calculateCashStock();
     }
 
     public ATM() {
@@ -42,7 +40,6 @@ public class ATM {
         addBanknote10(amountOf10);
         addBanknote20(amountOf20);
         addBanknote50(amountOf50);
-        calculateCashStock();
     }
 
     public boolean withdraw(int withdrawSum) {
@@ -51,7 +48,7 @@ public class ATM {
         withdrawSum -= commission;
 
         //расчет: хватает ли денег в банкомате
-        if (withdrawSum > cashStock) {
+        if (withdrawSum > calculateCashStock()) {
             System.out.print(MSG_WITHDRAWAL_IS_NOT_POSSIBLE + MSG_NOT_ENOUGH_MONEY);
             return false;
         }
@@ -107,7 +104,6 @@ public class ATM {
         banknoteStock50 -= amountOf50;
         banknoteStock20 -= amountOf20;
         banknoteStock10 -= amountOf10;
-        calculateCashStock();
     }
 
     private void addBanknote10(int amount) {
@@ -126,10 +122,11 @@ public class ATM {
         return amount > 0 ? amount : 0;
     }
 
-    private void calculateCashStock() {
-        cashStock = banknoteStock10 * DENOMINATION_TEN;
+    int calculateCashStock() {
+        int cashStock = banknoteStock10 * DENOMINATION_TEN;
         cashStock += banknoteStock20 * DENOMINATION_TWENTY;
         cashStock += banknoteStock50 * DENOMINATION_FIFTY;
+        return cashStock;
     }
 
     int getBanknoteStock10() {
@@ -142,9 +139,5 @@ public class ATM {
 
     int getBanknoteStock50() {
         return banknoteStock50;
-    }
-
-    int getCashStock() {
-        return cashStock;
     }
 }

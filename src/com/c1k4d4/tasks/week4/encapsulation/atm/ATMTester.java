@@ -57,7 +57,7 @@ public class ATMTester {
     //для отладки
     public static void printAtmState(ATM atm) {
         System.out.printf(MSG_ATM_STATE,
-                atm.getCashStock(),
+                atm.calculateCashStock(),
                 atm.getBanknoteStock10(),
                 atm.getBanknoteStock20(),
                 atm.getBanknoteStock50()
